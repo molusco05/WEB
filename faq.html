@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - GlowBeauty</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink-primary: #FF69B4;
+    --purple-primary: #8A2BE2;
+    --gray-light: #F8F9FA;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--gray-light);
+}
+
+/* HEADER */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--pink-primary), var(--purple-primary));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* HERO FAQ */
+.hero {
+    margin-top: 80px;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #FF69B4, #8A2BE2);
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    margin-top: 10px;
+}
+
+/* FAQ */
+.faq-container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.faq-category {
+    margin-bottom: 40px;
+}
+
+.faq-category h2 {
+    margin-bottom: 20px;
+    color: var(--purple-primary);
+}
+
+/* ITEM */
+.faq-item {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background: #f9f9f9;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: all 0.4s ease;
+    color: #555;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding: 20px;
+}
+
+.icon {
+    transition: transform 0.3s;
+}
+
+.faq-item.active .icon {
+    transform: rotate(180deg);
+}
+
+/* FOOTER */
+footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 50px;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botão voltar estilo premium */
+.back-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 105, 180, 0.08);
+    color: var(--pink-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Hover elegante */
+.back-nav:hover {
+    background: linear-gradient(135deg, var(--pink-primary), var(--purple-primary));
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+}
+
+/* Clique */
+.back-nav:active {
+    transform: scale(0.95);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+   <div class="nav-left">
+    <button class="back-nav" onclick="goBack()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="logo">GlowBeauty</div>
+</div>
+
+</header>
+
+<section class="hero">
+    <h1>Perguntas Frequentes</h1>
+    <p>Tire suas dúvidas sobre nossos produtos e serviços 💖</p>
+</section>
+
+<div class="faq-container">
+
+    <!-- PEDIDOS -->
+    <div class="faq-category">
+        <h2>🛍️ Pedidos</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Como faço um pedido?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Basta escolher seus produtos, adicionar ao carrinho e finalizar a compra preenchendo seus dados.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Posso alterar meu pedido?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Sim! Entre em contato com nosso suporte antes do envio do pedido.
+            </div>
+        </div>
+    </div>
+
+    <!-- ENTREGA -->
+    <div class="faq-category">
+        <h2>🚚 Entrega</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Qual o prazo de entrega?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                O prazo varia entre 2 a 7 dias úteis, dependendo da sua região.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Como rastrear meu pedido?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Você receberá um código de rastreio por email após o envio.
+            </div>
+        </div>
+    </div>
+
+    <!-- PRODUTOS -->
+    <div class="faq-category">
+        <h2>💄 Produtos</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Os produtos são originais?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Sim! Trabalhamos apenas com produtos 100% originais e de alta qualidade.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Os produtos são testados em animais?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Não! Nossos produtos são cruelty-free 💕
+            </div>
+        </div>
+    </div>
+
+    <!-- TROCAS -->
+    <div class="faq-category">
+        <h2>🔄 Trocas e Devoluções</h2>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Posso trocar um produto?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Sim, você pode solicitar troca em até 7 dias após o recebimento.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                Como solicitar devolução?
+                <i class="fas fa-chevron-down icon"></i>
+            </div>
+            <div class="faq-answer">
+                Entre em contato com nosso suporte informando o número do pedido.
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 GlowBeauty - Todos os direitos reservados</p>
+</footer>
+
+<script>
+const items = document.querySelectorAll('.faq-item');
+
+items.forEach(item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
+
+function goBack() {
+    if (document.referrer) {
+        window.history.back();
+    } else {
+        window.location.href = "index.html";
+    }
+}
+
+</script>
+
+</body>
+</html>
